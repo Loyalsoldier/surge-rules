@@ -30,37 +30,49 @@ jobs:
         run: |
           curl -sSL ${v2fly_icloud} | grep -E "^full:" | awk -F ':' '{printf "%s\n", $2}' > icloud.txt
           curl -sSL ${v2fly_icloud} | grep -E "^domain:" | awk -F ':' '{printf ".%s\n", $2}' >> icloud.txt
+          mkdir -p ruleset
+          curl -sSL ${v2fly_icloud} | grep -E "^full:" | awk -F ':' '{printf "DOMAIN,%s\n", $2}' > ruleset/icloud.txt
+          curl -sSL ${v2fly_icloud} | grep -E "^domain:" | awk -F ':' '{printf "DOMAIN-SUFFIX,%s\n", $2}' >> ruleset/icloud.txt
 
       - name: Generate google.txt file
         run: |
           curl -sSL ${felixonmars_google} | perl -ne '/^server=\/([^\/]+)\// && print ".$1\n"' > google.txt
+          curl -sSL ${felixonmars_google} | perl -ne '/^server=\/([^\/]+)\// && print "DOMAIN-SUFFIX,$1\n"' > ruleset/google.txt
 
       - name: Generate apple.txt file
         run: |
           curl -sSL ${felixonmars_apple} | perl -ne '/^server=\/([^\/]+)\// && print ".$1\n"' > apple.txt
           curl -sSL ${v2fly_apple} | grep -E "^full:" | awk -F ':' '{printf "%s\n", $2}' >> apple.txt
           curl -sSL ${v2fly_apple} | grep -E "^domain:" | awk -F ':' '{printf ".%s\n", $2}' >> apple.txt
+          curl -sSL ${felixonmars_apple} | perl -ne '/^server=\/([^\/]+)\// && print "DOMAIN-SUFFIX,$1\n"' > ruleset/apple.txt
+          curl -sSL ${v2fly_apple} | grep -E "^full:" | awk -F ':' '{printf "DOMAIN,%s\n", $2}' >> ruleset/apple.txt
+          curl -sSL ${v2fly_apple} | grep -E "^domain:" | awk -F ':' '{printf "DOMAIN-SUFFIX,%s\n", $2}' >> ruleset/apple.txt
 
       - name: Generate direct.txt file
         run: |
           curl -sSL ${Loyalsoldier_direct} | perl -ne '/^([-_a-zA-Z0-9]+(\.[-_a-zA-Z0-9]+)*)/ && print ".$1\n"' > direct.txt
+          curl -sSL ${Loyalsoldier_direct} | perl -ne '/^([-_a-zA-Z0-9]+(\.[-_a-zA-Z0-9]+)*)/ && print "DOMAIN-SUFFIX,$1\n"' > ruleset/direct.txt
 
       - name: Generate proxy.txt file
         run: |
           curl -sSL ${Loyalsoldier_proxy} | perl -ne '/^([-_a-zA-Z0-9]+(\.[-_a-zA-Z0-9]+)*)/ && print ".$1\n"' > proxy.txt
+          curl -sSL ${Loyalsoldier_proxy} | perl -ne '/^([-_a-zA-Z0-9]+(\.[-_a-zA-Z0-9]+)*)/ && print "DOMAIN-SUFFIX,$1\n"' > ruleset/proxy.txt
 
       - name: Generate reject.txt file
         run: |
           curl -sSL ${Loyalsoldier_reject} | perl -ne '/^([-_a-zA-Z0-9]+(\.[-_a-zA-Z0-9]+)*)/ && print ".$1\n"' > reject.txt
+          curl -sSL ${Loyalsoldier_reject} | perl -ne '/^([-_a-zA-Z0-9]+(\.[-_a-zA-Z0-9]+)*)/ && print "DOMAIN-SUFFIX,$1\n"' > ruleset/reject.txt
 
       - name: Generate cncidr.txt file
         run: |
           curl -sSL ${ipipnet_chinaiplist} | perl -ne '/^(\d{1,3}(\.\d{1,3}){3}\/\d{1,2})/ && print "$1\n"' > cncidr.txt
+          curl -sSL ${ipipnet_chinaiplist} | perl -ne '/^(\d{1,3}(\.\d{1,3}){3}\/\d{1,2})/ && print "IP-CIDR,$1\n"' > ruleset/cncidr.txt
 
       - name: Move files to publish directory
         run: |
           mkdir -p publish
           install -p {apple,icloud,google,proxy,direct,reject,cncidr}.txt ./publish/
+          mv ruleset ./publish/
 
       - name: Release and upload assets
         uses: softprops/action-gh-release@v1
