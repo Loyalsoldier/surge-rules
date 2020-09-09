@@ -8,9 +8,8 @@
 
 ### ⚠️ 注意：
 
-- **DOMAIN-SET** 只适用于 Surge for Mac **v3.5.1** 及更新的版本，拥有比 RULE-SET 更优秀的匹配效率，建议优先使用。
+- **DOMAIN-SET** 同时适用于 Surge for Mac **v3.5.1** 及更新的版本、Surge for iOS **v4.2.2** 及更新的版本，拥有比 RULE-SET 更优秀的匹配效率，建议优先使用。
 - **RULE-SET** 同时适用于 Surge for Mac **v3.0** 及更新的版本、Surge for iOS **v3.4** 及更新的版本。
-- 由于本项目规则集很庞大，用于 Surge for iOS 可能会拖慢移动设备网速或性能（未测试），请酌情使用。
 
 ## 规则文件地址及使用方式
 
@@ -87,7 +86,7 @@ PROCESS-NAME,trojan-go,DIRECT
 PROCESS-NAME,naive,DIRECT
 PROCESS-NAME,Thunder,DIRECT
 PROCESS-NAME,DownloadService,DIRECT
-PROCESS-NAME,qbittorrent,DIRECT
+PROCESS-NAME,qBittorrent,DIRECT
 PROCESS-NAME,Transmission,DIRECT
 PROCESS-NAME,fdm,DIRECT
 PROCESS-NAME,aria2c,DIRECT
@@ -120,7 +119,7 @@ PROCESS-NAME,trojan-go,DIRECT
 PROCESS-NAME,naive,DIRECT
 PROCESS-NAME,Thunder,DIRECT
 PROCESS-NAME,DownloadService,DIRECT
-PROCESS-NAME,qbittorrent,DIRECT
+PROCESS-NAME,qBittorrent,DIRECT
 PROCESS-NAME,Transmission,DIRECT
 PROCESS-NAME,fdm,DIRECT
 PROCESS-NAME,aria2c,DIRECT
