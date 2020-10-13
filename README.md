@@ -67,9 +67,11 @@
 
 ### 使用方式
 
-关于 Surge 的详细使用方法，见[官方手册](https://manual.nssurge.com)。要想使用本项目的规则集，只需要在 Surge 配置文件中添加如下规则。
+关于 Surge 的详细使用方法，见[官方手册](https://manual.nssurge.com)。要想使用本项目的规则集，只需要在 Surge 配置文件中添加如下规则：
 
-- 如果希望使用 DNS 来解析未命中域名类型规则的域名，而不是直接走代理，请删除 `cncidr` 行尾的 `,no-resolve`。
+⚠️ 注意：
+
+- 如果希望使用 DNS 来解析未命中域名类型规则的域名，而不是直接走代理，请删除规则行尾的 `,no-resolve`。
 - 以下配置中，除了 `DIRECT` 和 `REJECT` 是默认存在于 Surge 中的 policy（路由策略/流量处理策略），其余均为自定义 policy，对应配置文件中 `[Proxy]` 或 `[Proxy Group]` 中的代理名称。如你直接使用下面的 `[Rule]` 规则，则需要在 `[Proxy]` 或 `[Proxy Group]` 中手动配置一个名为 `PROXY` 的 policy。
 - 如你希望 Apple、iCloud 和 Google 列表中的域名使用代理，则把 policy 由 `DIRECT` 改为 `PROXY`，以此类推，举一反三。
 
