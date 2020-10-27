@@ -1,5 +1,6 @@
 name: Generate routing rules for Surge
 on:
+  workflow_dispatch:
   schedule:
     - cron: "30 22 * * *"
   push:
