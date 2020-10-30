@@ -17,11 +17,13 @@ jobs:
         run: |
           echo "RELEASE_NAME=Released on $(date +%Y%m%d%H%M)" >> $GITHUB_ENV
           echo "TAG_NAME=$(date +%Y%m%d%H%M)" >> $GITHUB_ENV
-          echo "v2fly_icloud=https://raw.githubusercontent.com/v2fly/domain-list-community/release/icloud.txt" >> $GITHUB_ENV
-          echo "v2fly_apple=https://raw.githubusercontent.com/v2fly/domain-list-community/release/apple.txt" >> $GITHUB_ENV
+          echo "custom_icloud=https://raw.githubusercontent.com/Loyalsoldier/domain-list-custom/release/icloud.txt" >> $GITHUB_ENV
+          echo "custom_tld_not_cn=https://raw.githubusercontent.com/Loyalsoldier/domain-list-custom/release/tld-!cn.txt" >> $GITHUB_ENV
           echo "Loyalsoldier_reject=https://raw.githubusercontent.com/Loyalsoldier/v2ray-rules-dat/release/reject-list.txt" >> $GITHUB_ENV
           echo "Loyalsoldier_proxy=https://raw.githubusercontent.com/Loyalsoldier/v2ray-rules-dat/release/proxy-list.txt" >> $GITHUB_ENV
           echo "Loyalsoldier_direct=https://raw.githubusercontent.com/Loyalsoldier/v2ray-rules-dat/release/direct-list.txt" >> $GITHUB_ENV
+          echo "Loyalsoldier_gfw=https://raw.githubusercontent.com/Loyalsoldier/v2ray-rules-dat/release/gfw.txt" >> $GITHUB_ENV
+          echo "Loyalsoldier_greatfire=https://raw.githubusercontent.com/Loyalsoldier/v2ray-rules-dat/release/greatfire.txt" >> $GITHUB_ENV
           echo "felixonmars_apple=https://raw.githubusercontent.com/felixonmars/dnsmasq-china-list/master/apple.china.conf" >> $GITHUB_ENV
           echo "felixonmars_google=https://raw.githubusercontent.com/felixonmars/dnsmasq-china-list/master/google.china.conf" >> $GITHUB_ENV
           echo "ipipnet_chinaiplist=https://raw.githubusercontent.com/17mon/china_ip_list/master/china_ip_list.txt" >> $GITHUB_ENV
@@ -29,11 +31,11 @@ jobs:
 
       - name: Generate icloud.txt file
         run: |
-          curl -sSL ${v2fly_icloud} | grep -E "^full:" | awk -F ':' '{printf "%s\n", $2}' > icloud.txt
-          curl -sSL ${v2fly_icloud} | grep -E "^domain:" | awk -F ':' '{printf ".%s\n", $2}' >> icloud.txt
+          curl -sSL ${custom_icloud} | grep -E "^full:" | awk -F ':' '{printf "%s\n", $2}' > icloud.txt
+          curl -sSL ${custom_icloud} | grep -E "^domain:" | awk -F ':' '{printf ".%s\n", $2}' >> icloud.txt
           mkdir -p ruleset
-          curl -sSL ${v2fly_icloud} | grep -E "^full:" | awk -F ':' '{printf "DOMAIN,%s\n", $2}' > ruleset/icloud.txt
-          curl -sSL ${v2fly_icloud} | grep -E "^domain:" | awk -F ':' '{printf "DOMAIN-SUFFIX,%s\n", $2}' >> ruleset/icloud.txt
+          curl -sSL ${custom_icloud} | grep -E "^full:" | awk -F ':' '{printf "DOMAIN,%s\n", $2}' > ruleset/icloud.txt
+          curl -sSL ${custom_icloud} | grep -E "^domain:" | awk -F ':' '{printf "DOMAIN-SUFFIX,%s\n", $2}' >> ruleset/icloud.txt
 
       - name: Generate google.txt file
         run: |
@@ -43,11 +45,7 @@ jobs:
       - name: Generate apple.txt file
         run: |
           curl -sSL ${felixonmars_apple} | perl -ne '/^server=\/([^\/]+)\// && print ".$1\n"' > apple.txt
-          curl -sSL ${v2fly_apple} | grep -E "^full:" | awk -F ':' '{printf "%s\n", $2}' >> apple.txt
-          curl -sSL ${v2fly_apple} | grep -E "^domain:" | awk -F ':' '{printf ".%s\n", $2}' >> apple.txt
           curl -sSL ${felixonmars_apple} | perl -ne '/^server=\/([^\/]+)\// && print "DOMAIN-SUFFIX,$1\n"' > ruleset/apple.txt
-          curl -sSL ${v2fly_apple} | grep -E "^full:" | awk -F ':' '{printf "DOMAIN,%s\n", $2}' >> ruleset/apple.txt
-          curl -sSL ${v2fly_apple} | grep -E "^domain:" | awk -F ':' '{printf "DOMAIN-SUFFIX,%s\n", $2}' >> ruleset/apple.txt
 
       - name: Generate direct.txt file
         run: |
@@ -64,6 +62,21 @@ jobs:
           curl -sSL ${Loyalsoldier_reject} | perl -ne '/^([-_a-zA-Z0-9]+(\.[-_a-zA-Z0-9]+)*)/ && print ".$1\n"' > reject.txt
           curl -sSL ${Loyalsoldier_reject} | perl -ne '/^([-_a-zA-Z0-9]+(\.[-_a-zA-Z0-9]+)*)/ && print "DOMAIN-SUFFIX,$1\n"' > ruleset/reject.txt
 
+      - name: Generate gfw.txt file
+        run: |
+          curl -sSL ${Loyalsoldier_gfw} | perl -ne '/^([-_a-zA-Z0-9]+(\.[-_a-zA-Z0-9]+)*)/ && print ".$1\n"' > gfw.txt
+          curl -sSL ${Loyalsoldier_gfw} | perl -ne '/^([-_a-zA-Z0-9]+(\.[-_a-zA-Z0-9]+)*)/ && print "DOMAIN-SUFFIX,$1\n"' > ruleset/gfw.txt
+
+      - name: Generate greatfire.txt file
+        run: |
+          curl -sSL ${Loyalsoldier_greatfire} | perl -ne '/^([-_a-zA-Z0-9]+(\.[-_a-zA-Z0-9]+)*)/ && print ".$1\n"' > greatfire.txt
+          curl -sSL ${Loyalsoldier_greatfire} | perl -ne '/^([-_a-zA-Z0-9]+(\.[-_a-zA-Z0-9]+)*)/ && print "DOMAIN-SUFFIX,$1\n"' > ruleset/greatfire.txt
+
+      - name: Generate tld-not-cn.txt file
+        run: |
+          curl -sSL ${custom_tld_not_cn} | grep -E "^domain:" | awk -F ':' '{printf ".%s\n", $2}' > tld-not-cn.txt
+          curl -sSL ${custom_tld_not_cn} | grep -E "^domain:" | awk -F ':' '{printf "DOMAIN-SUFFIX,%s\n", $2}' > ruleset/tld-not-cn.txt
+
       - name: Generate cncidr.txt file
         run: |
           curl -sSL ${ipipnet_chinaiplist} | perl -ne '/^(\d{1,3}(\.\d{1,3}){3}\/\d{1,2})/ && print "IP-CIDR,$1\n"' > cncidr.txt
@@ -72,7 +85,7 @@ jobs:
       - name: Move files to publish directory
         run: |
           mkdir -p publish
-          install -p {apple,icloud,google,proxy,direct,reject,cncidr}.txt ./publish/
+          install -p {apple,icloud,google,proxy,direct,reject,gfw,greatfire,tld-not-cn,cncidr}.txt ./publish/
           mv ruleset ./publish/
 
       - name: Release and upload assets
