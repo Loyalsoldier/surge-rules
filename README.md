@@ -37,6 +37,15 @@
 - **Google 域名列表 google.txt**：
   - [https://raw.githubusercontent.com/Loyalsoldier/surge-rules/release/google.txt](https://raw.githubusercontent.com/Loyalsoldier/surge-rules/release/google.txt)
   - [https://cdn.jsdelivr.net/gh/Loyalsoldier/surge-rules@release/google.txt](https://cdn.jsdelivr.net/gh/Loyalsoldier/surge-rules@release/google.txt)
+- **GFWList 域名列表 gfw.txt**：
+  - [https://raw.githubusercontent.com/Loyalsoldier/surge-rules/release/gfw.txt](https://raw.githubusercontent.com/Loyalsoldier/surge-rules/release/gfw.txt)
+  - [https://cdn.jsdelivr.net/gh/Loyalsoldier/surge-rules@release/gfw.txt](https://cdn.jsdelivr.net/gh/Loyalsoldier/surge-rules@release/gfw.txt)
+- **Greatfire 域名列表 greatfire.txt**：
+  - [https://raw.githubusercontent.com/Loyalsoldier/surge-rules/release/greatfire.txt](https://raw.githubusercontent.com/Loyalsoldier/surge-rules/release/greatfire.txt)
+  - [https://cdn.jsdelivr.net/gh/Loyalsoldier/surge-rules@release/greatfire.txt](https://cdn.jsdelivr.net/gh/Loyalsoldier/surge-rules@release/greatfire.txt)
+- **非中国大陆使用的顶级域名列表 tld-not-cn.txt**：
+  - [https://raw.githubusercontent.com/Loyalsoldier/surge-rules/release/tld-not-cn.txt](https://raw.githubusercontent.com/Loyalsoldier/surge-rules/release/tld-not-cn.txt)
+  - [https://cdn.jsdelivr.net/gh/Loyalsoldier/surge-rules@release/tld-not-cn.txt](https://cdn.jsdelivr.net/gh/Loyalsoldier/surge-rules@release/tld-not-cn.txt)
 - **中国大陆 IPv4 地址列表 cncidr.txt**：
   - [https://raw.githubusercontent.com/Loyalsoldier/surge-rules/release/cncidr.txt](https://raw.githubusercontent.com/Loyalsoldier/surge-rules/release/cncidr.txt)
   - [https://cdn.jsdelivr.net/gh/Loyalsoldier/surge-rules@release/cncidr.txt](https://cdn.jsdelivr.net/gh/Loyalsoldier/surge-rules@release/cncidr.txt)
@@ -61,6 +70,15 @@
 - **Google 域名列表 google.txt**：
   - [https://raw.githubusercontent.com/Loyalsoldier/surge-rules/release/ruleset/google.txt](https://raw.githubusercontent.com/Loyalsoldier/surge-rules/release/ruleset/google.txt)
   - [https://cdn.jsdelivr.net/gh/Loyalsoldier/surge-rules@release/ruleset/google.txt](https://cdn.jsdelivr.net/gh/Loyalsoldier/surge-rules@release/ruleset/google.txt)
+- **GFWList 域名列表 gfw.txt**：
+  - [https://raw.githubusercontent.com/Loyalsoldier/surge-rules/release/ruleset/gfw.txt](https://raw.githubusercontent.com/Loyalsoldier/surge-rules/release/ruleset/gfw.txt)
+  - [https://cdn.jsdelivr.net/gh/Loyalsoldier/surge-rules@release/ruleset/gfw.txt](https://cdn.jsdelivr.net/gh/Loyalsoldier/surge-rules@release/ruleset/gfw.txt)
+- **Greatfire 域名列表 greatfire.txt**：
+  - [https://raw.githubusercontent.com/Loyalsoldier/surge-rules/release/ruleset/greatfire.txt](https://raw.githubusercontent.com/Loyalsoldier/surge-rules/release/ruleset/greatfire.txt)
+  - [https://cdn.jsdelivr.net/gh/Loyalsoldier/surge-rules@release/ruleset/greatfire.txt](https://cdn.jsdelivr.net/gh/Loyalsoldier/surge-rules@release/ruleset/greatfire.txt)
+- **非中国大陆使用的顶级域名列表 tld-not-cn.txt**：
+  - [https://raw.githubusercontent.com/Loyalsoldier/surge-rules/release/ruleset/tld-not-cn.txt](https://raw.githubusercontent.com/Loyalsoldier/surge-rules/release/ruleset/tld-not-cn.txt)
+  - [https://cdn.jsdelivr.net/gh/Loyalsoldier/surge-rules@release/ruleset/tld-not-cn.txt](https://cdn.jsdelivr.net/gh/Loyalsoldier/surge-rules@release/ruleset/tld-not-cn.txt)
 - **中国大陆 IPv4 地址列表 cncidr.txt**：
   - [https://raw.githubusercontent.com/Loyalsoldier/surge-rules/release/ruleset/cncidr.txt](https://raw.githubusercontent.com/Loyalsoldier/surge-rules/release/ruleset/cncidr.txt)
   - [https://cdn.jsdelivr.net/gh/Loyalsoldier/surge-rules@release/ruleset/cncidr.txt](https://cdn.jsdelivr.net/gh/Loyalsoldier/surge-rules@release/ruleset/cncidr.txt)
@@ -69,13 +87,15 @@
 
 关于 Surge 的详细使用方法，见[官方手册](https://manual.nssurge.com)。要想使用本项目的规则集，只需要在 Surge 配置文件中添加如下规则：
 
+#### 白名单模式（推荐）
+
 ⚠️ 注意：
 
-- 如果希望使用 DNS 来解析未命中域名类型规则的域名，而不是直接走代理，请删除规则行尾的 `,no-resolve`。
+- 白名单模式，意为「**没有命中规则的网络流量，统统使用代理**」，适用于服务器线路网络质量稳定、快速，不缺服务器流量的用户。
 - 以下配置中，除了 `DIRECT` 和 `REJECT` 是默认存在于 Surge 中的 policy（路由策略/流量处理策略），其余均为自定义 policy，对应配置文件中 `[Proxy]` 或 `[Proxy Group]` 中的代理名称。如你直接使用下面的 `[Rule]` 规则，则需要在 `[Proxy]` 或 `[Proxy Group]` 中手动配置一个名为 `PROXY` 的 policy。
 - 如你希望 Apple、iCloud 和 Google 列表中的域名使用代理，则把 policy 由 `DIRECT` 改为 `PROXY`，以此类推，举一反三。
 
-#### DOMAIN-SET
+**DOMAIN-SET：**
 
 ```
 [Rule]
@@ -103,12 +123,12 @@ DOMAIN-SET,https://cdn.jsdelivr.net/gh/Loyalsoldier/surge-rules@release/apple.tx
 DOMAIN-SET,https://cdn.jsdelivr.net/gh/Loyalsoldier/surge-rules@release/google.txt,DIRECT
 DOMAIN-SET,https://cdn.jsdelivr.net/gh/Loyalsoldier/surge-rules@release/proxy.txt,PROXY,force-remote-dns
 DOMAIN-SET,https://cdn.jsdelivr.net/gh/Loyalsoldier/surge-rules@release/direct.txt,DIRECT
-RULE-SET,https://cdn.jsdelivr.net/gh/Loyalsoldier/surge-rules@release/cncidr.txt,DIRECT,no-resolve
-RULE-SET,LAN,DIRECT,no-resolve
+RULE-SET,https://cdn.jsdelivr.net/gh/Loyalsoldier/surge-rules@release/cncidr.txt,DIRECT
+RULE-SET,LAN,DIRECT
 FINAL,PROXY,dns-failed
 ```
 
-#### RULE-SET
+**RULE-SET：**
 
 ```
 [Rule]
@@ -136,14 +156,149 @@ RULE-SET,https://cdn.jsdelivr.net/gh/Loyalsoldier/surge-rules@release/ruleset/ap
 RULE-SET,https://cdn.jsdelivr.net/gh/Loyalsoldier/surge-rules@release/ruleset/google.txt,DIRECT
 RULE-SET,https://cdn.jsdelivr.net/gh/Loyalsoldier/surge-rules@release/ruleset/proxy.txt,PROXY,force-remote-dns
 RULE-SET,https://cdn.jsdelivr.net/gh/Loyalsoldier/surge-rules@release/ruleset/direct.txt,DIRECT
-RULE-SET,https://cdn.jsdelivr.net/gh/Loyalsoldier/surge-rules@release/ruleset/cncidr.txt,DIRECT,no-resolve
-RULE-SET,LAN,DIRECT,no-resolve
+RULE-SET,https://cdn.jsdelivr.net/gh/Loyalsoldier/surge-rules@release/ruleset/cncidr.txt,DIRECT
+RULE-SET,LAN,DIRECT
 FINAL,PROXY,dns-failed
+```
+
+#### 黑色名单模式
+
+⚠️ 注意：
+
+- 黑名单模式，意为「**只有命中规则的网络流量，才使用代理**」，适用于服务器线路网络质量不稳定或不够快，或服务器流量紧缺的用户。通常也是软路由用户、家庭网关用户的常用模式。
+- 以下配置中，除了 `DIRECT` 和 `REJECT` 是默认存在于 Surge 中的 policy（路由策略/流量处理策略），其余均为自定义 policy，对应配置文件中 `[Proxy]` 或 `[Proxy Group]` 中的代理名称。如你直接使用下面的 `[Rule]` 规则，则需要在 `[Proxy]` 或 `[Proxy Group]` 中手动配置一个名为 `PROXY` 的 policy。
+- 如你希望 Apple、iCloud 和 Google 列表中的域名使用代理，则把 policy 由 `DIRECT` 改为 `PROXY`，以此类推，举一反三。
+
+**DOMAIN-SET：**
+
+```
+[Rule]
+PROCESS-NAME,v2ray,DIRECT
+PROCESS-NAME,clash,DIRECT
+PROCESS-NAME,ss-local,DIRECT
+PROCESS-NAME,privoxy,DIRECT
+PROCESS-NAME,trojan,DIRECT
+PROCESS-NAME,trojan-go,DIRECT
+PROCESS-NAME,naive,DIRECT
+PROCESS-NAME,Thunder,DIRECT
+PROCESS-NAME,DownloadService,DIRECT
+PROCESS-NAME,qBittorrent,DIRECT
+PROCESS-NAME,Transmission,DIRECT
+PROCESS-NAME,fdm,DIRECT
+PROCESS-NAME,aria2c,DIRECT
+PROCESS-NAME,Folx,DIRECT
+PROCESS-NAME,NetTransport,DIRECT
+PROCESS-NAME,uTorrent,DIRECT
+PROCESS-NAME,WebTorrent,DIRECT
+DOMAIN-SET,https://cdn.jsdelivr.net/gh/Loyalsoldier/surge-rules@release/reject.txt,REJECT
+RULE-SET,SYSTEM,DIRECT
+DOMAIN-SET,https://cdn.jsdelivr.net/gh/Loyalsoldier/surge-rules@release/tld-not-cn.txt,PROXY,force-remote-dns
+DOMAIN-SET,https://cdn.jsdelivr.net/gh/Loyalsoldier/surge-rules@release/gfw.txt,PROXY,force-remote-dns
+DOMAIN-SET,https://cdn.jsdelivr.net/gh/Loyalsoldier/surge-rules@release/greatfire.txt,PROXY,force-remote-dns
+GEOIP,AE,PROXY
+GEOIP,AU,PROXY
+GEOIP,BR,PROXY
+GEOIP,CA,PROXY
+GEOIP,DE,PROXY
+GEOIP,DK,PROXY
+GEOIP,ES,PROXY
+GEOIP,FI,PROXY
+GEOIP,FR,PROXY
+GEOIP,GB,PROXY
+GEOIP,GR,PROXY
+GEOIP,HK,PROXY
+GEOIP,ID,PROXY
+GEOIP,IL,PROXY
+GEOIP,IN,PROXY
+GEOIP,IQ,PROXY
+GEOIP,IR,PROXY
+GEOIP,IT,PROXY
+GEOIP,JP,PROXY
+GEOIP,KR,PROXY
+GEOIP,MO,PROXY
+GEOIP,MY,PROXY
+GEOIP,NL,PROXY
+GEOIP,NO,PROXY
+GEOIP,NZ,PROXY
+GEOIP,PH,PROXY
+GEOIP,RU,PROXY
+GEOIP,SA,PROXY
+GEOIP,SG,PROXY
+GEOIP,TH,PROXY
+GEOIP,TR,PROXY
+GEOIP,TW,PROXY
+GEOIP,US,PROXY
+GEOIP,VN,PROXY
+FINAL,DIRECT,dns-failed
+```
+
+**RULE-SET：**
+
+```
+[Rule]
+PROCESS-NAME,v2ray,DIRECT
+PROCESS-NAME,clash,DIRECT
+PROCESS-NAME,ss-local,DIRECT
+PROCESS-NAME,privoxy,DIRECT
+PROCESS-NAME,trojan,DIRECT
+PROCESS-NAME,trojan-go,DIRECT
+PROCESS-NAME,naive,DIRECT
+PROCESS-NAME,Thunder,DIRECT
+PROCESS-NAME,DownloadService,DIRECT
+PROCESS-NAME,qBittorrent,DIRECT
+PROCESS-NAME,Transmission,DIRECT
+PROCESS-NAME,fdm,DIRECT
+PROCESS-NAME,aria2c,DIRECT
+PROCESS-NAME,Folx,DIRECT
+PROCESS-NAME,NetTransport,DIRECT
+PROCESS-NAME,uTorrent,DIRECT
+PROCESS-NAME,WebTorrent,DIRECT
+RULE-SET,https://cdn.jsdelivr.net/gh/Loyalsoldier/surge-rules@release/ruleset/reject.txt,REJECT
+RULE-SET,SYSTEM,DIRECT
+RULE-SET,https://cdn.jsdelivr.net/gh/Loyalsoldier/surge-rules@release/ruleset/tld-not-cn.txt,PROXY,force-remote-dns
+RULE-SET,https://cdn.jsdelivr.net/gh/Loyalsoldier/surge-rules@release/ruleset/gfw.txt,PROXY,force-remote-dns
+RULE-SET,https://cdn.jsdelivr.net/gh/Loyalsoldier/surge-rules@release/ruleset/greatfire.txt,PROXY,force-remote-dns
+GEOIP,AE,PROXY
+GEOIP,AU,PROXY
+GEOIP,BR,PROXY
+GEOIP,CA,PROXY
+GEOIP,DE,PROXY
+GEOIP,DK,PROXY
+GEOIP,ES,PROXY
+GEOIP,FI,PROXY
+GEOIP,FR,PROXY
+GEOIP,GB,PROXY
+GEOIP,GR,PROXY
+GEOIP,HK,PROXY
+GEOIP,ID,PROXY
+GEOIP,IL,PROXY
+GEOIP,IN,PROXY
+GEOIP,IQ,PROXY
+GEOIP,IR,PROXY
+GEOIP,IT,PROXY
+GEOIP,JP,PROXY
+GEOIP,KR,PROXY
+GEOIP,MO,PROXY
+GEOIP,MY,PROXY
+GEOIP,NL,PROXY
+GEOIP,NO,PROXY
+GEOIP,NZ,PROXY
+GEOIP,PH,PROXY
+GEOIP,RU,PROXY
+GEOIP,SA,PROXY
+GEOIP,SG,PROXY
+GEOIP,TH,PROXY
+GEOIP,TR,PROXY
+GEOIP,TW,PROXY
+GEOIP,US,PROXY
+GEOIP,VN,PROXY
+FINAL,DIRECT,dns-failed
 ```
 
 ## 致谢
 
 - [@Loyalsoldier/v2ray-rules-dat](https://github.com/Loyalsoldier/v2ray-rules-dat)
+- [@Loyalsoldier/cn-blocked-domain](https://github.com/Loyalsoldier/cn-blocked-domain)
 - [@v2fly/domain-list-community](https://github.com/v2fly/domain-list-community)
 - [@felixonmars/dnsmasq-china-list](https://github.com/felixonmars/dnsmasq-china-list)
 - [@17mon/china_ip_list](https://github.com/17mon/china_ip_list)
