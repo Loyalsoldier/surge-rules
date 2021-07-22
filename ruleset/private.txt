@@ -1,0 +1,12 @@
+DOMAIN,router.asus.com
+DOMAIN-SUFFIX,lan
+DOMAIN-SUFFIX,localdomain
+DOMAIN-SUFFIX,example
+DOMAIN-SUFFIX,invalid
+DOMAIN-SUFFIX,localhost
+DOMAIN-SUFFIX,test
+DOMAIN-SUFFIX,local
+DOMAIN-SUFFIX,home.arpa
+DOMAIN-SUFFIX,msftconnecttest.com
+DOMAIN-SUFFIX,localhost.sec.qq.com
+DOMAIN-SUFFIX,localhost.ptlogin2.qq.com
