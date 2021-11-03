@@ -52,7 +52,7 @@
 - **Telegram 使用的 IP 地址列表 telegramcidr.txt**：
   - [https://raw.githubusercontent.com/Loyalsoldier/surge-rules/release/telegramcidr.txt](https://raw.githubusercontent.com/Loyalsoldier/surge-rules/release/telegramcidr.txt)
   - [https://cdn.jsdelivr.net/gh/Loyalsoldier/surge-rules@release/telegramcidr.txt](https://cdn.jsdelivr.net/gh/Loyalsoldier/surge-rules@release/telegramcidr.txt)
-- **中国大陆 IPv4 地址列表 cncidr.txt**：
+- **中国大陆 IP 地址列表 cncidr.txt**：
   - [https://raw.githubusercontent.com/Loyalsoldier/surge-rules/release/cncidr.txt](https://raw.githubusercontent.com/Loyalsoldier/surge-rules/release/cncidr.txt)
   - [https://cdn.jsdelivr.net/gh/Loyalsoldier/surge-rules@release/cncidr.txt](https://cdn.jsdelivr.net/gh/Loyalsoldier/surge-rules@release/cncidr.txt)
 
@@ -91,7 +91,7 @@
 - **Telegram 使用的 IP 地址列表 telegramcidr.txt**：
   - [https://raw.githubusercontent.com/Loyalsoldier/surge-rules/release/ruleset/telegramcidr.txt](https://raw.githubusercontent.com/Loyalsoldier/surge-rules/release/ruleset/telegramcidr.txt)
   - [https://cdn.jsdelivr.net/gh/Loyalsoldier/surge-rules@release/ruleset/telegramcidr.txt](https://cdn.jsdelivr.net/gh/Loyalsoldier/surge-rules@release/ruleset/telegramcidr.txt)
-- **中国大陆 IPv4 地址列表 cncidr.txt**：
+- **中国大陆 IP 地址列表 cncidr.txt**：
   - [https://raw.githubusercontent.com/Loyalsoldier/surge-rules/release/ruleset/cncidr.txt](https://raw.githubusercontent.com/Loyalsoldier/surge-rules/release/ruleset/cncidr.txt)
   - [https://cdn.jsdelivr.net/gh/Loyalsoldier/surge-rules@release/ruleset/cncidr.txt](https://cdn.jsdelivr.net/gh/Loyalsoldier/surge-rules@release/ruleset/cncidr.txt)
 
@@ -257,6 +257,7 @@ FINAL,DIRECT,dns-failed
 
 ## 致谢
 
+- [@Loyalsoldier/geoip](https://github.com/Loyalsoldier/geoip)
 - [@Loyalsoldier/v2ray-rules-dat](https://github.com/Loyalsoldier/v2ray-rules-dat)
 - [@Loyalsoldier/cn-blocked-domain](https://github.com/Loyalsoldier/cn-blocked-domain)
 - [@v2fly/domain-list-community](https://github.com/v2fly/domain-list-community)
