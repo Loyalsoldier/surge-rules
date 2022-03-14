@@ -55,6 +55,12 @@
 - **中国大陆 IP 地址列表 cncidr.txt**：
   - [https://raw.githubusercontent.com/Loyalsoldier/surge-rules/release/cncidr.txt](https://raw.githubusercontent.com/Loyalsoldier/surge-rules/release/cncidr.txt)
   - [https://cdn.jsdelivr.net/gh/Loyalsoldier/surge-rules@release/cncidr.txt](https://cdn.jsdelivr.net/gh/Loyalsoldier/surge-rules@release/cncidr.txt)
+- **steam列表 steam.txt**：
+  - [https://raw.githubusercontent.com/Loyalsoldier/surge-rules/release/ruleset/steam.txt](https://raw.githubusercontent.com/Loyalsoldier/surge-rules/release/ruleset/steam.txt)
+  - [https://cdn.jsdelivr.net/gh/Loyalsoldier/surge-rules@release/ruleset/steam.txt](https://cdn.jsdelivr.net/gh/Loyalsoldier/surge-rules@release/ruleset/steam.txt)
+- **steam中国列表 steam.txt**：
+  - [https://raw.githubusercontent.com/Loyalsoldier/surge-rules/release/steam-cn.txt](https://raw.githubusercontent.com/Loyalsoldier/surge-rules/release/steam-cn.txt)
+  - [https://cdn.jsdelivr.net/gh/Loyalsoldier/surge-rules@release/steam-cn.txt](https://cdn.jsdelivr.net/gh/Loyalsoldier/surge-rules@release/steam-cn.txt)
 
 #### RULE-SET:
 
@@ -94,6 +100,12 @@
 - **中国大陆 IP 地址列表 cncidr.txt**：
   - [https://raw.githubusercontent.com/Loyalsoldier/surge-rules/release/ruleset/cncidr.txt](https://raw.githubusercontent.com/Loyalsoldier/surge-rules/release/ruleset/cncidr.txt)
   - [https://cdn.jsdelivr.net/gh/Loyalsoldier/surge-rules@release/ruleset/cncidr.txt](https://cdn.jsdelivr.net/gh/Loyalsoldier/surge-rules@release/ruleset/cncidr.txt)
+- **steam列表 steam.txt**：
+  - [https://raw.githubusercontent.com/Loyalsoldier/surge-rules/release/ruleset/steam.txt](https://raw.githubusercontent.com/Loyalsoldier/surge-rules/release/ruleset/steam.txt)
+  - [https://cdn.jsdelivr.net/gh/Loyalsoldier/surge-rules@release/ruleset/steam.txt](https://cdn.jsdelivr.net/gh/Loyalsoldier/surge-rules@release/ruleset/steam.txt)
+- **steam中国列表 steam.txt**：
+  - [https://raw.githubusercontent.com/Loyalsoldier/surge-rules/release/ruleset/steam-cn.txt](https://raw.githubusercontent.com/Loyalsoldier/surge-rules/release/ruleset/steam-cn.txt)
+  - [https://cdn.jsdelivr.net/gh/Loyalsoldier/surge-rules@release/ruleset/steam-cn.txt](https://cdn.jsdelivr.net/gh/Loyalsoldier/surge-rules@release/ruleset/steam-cn.txt)
 
 ### 使用方式
 
@@ -130,6 +142,8 @@ PROCESS-NAME,Folx,DIRECT
 PROCESS-NAME,NetTransport,DIRECT
 PROCESS-NAME,uTorrent,DIRECT
 PROCESS-NAME,WebTorrent,DIRECT
+DOMAIN-SET,https://cdn.jsdelivr.net/gh/Loyalsoldier/surge-rules@release/steam.txt,PROXY
+DOMAIN-SET,https://cdn.jsdelivr.net/gh/Loyalsoldier/surge-rules@release/steam-cn.txt,DIRECT
 DOMAIN-SET,https://cdn.jsdelivr.net/gh/Loyalsoldier/surge-rules@release/private.txt,DIRECT
 DOMAIN-SET,https://cdn.jsdelivr.net/gh/Loyalsoldier/surge-rules@release/reject.txt,REJECT
 RULE-SET,SYSTEM,DIRECT
@@ -167,6 +181,8 @@ PROCESS-NAME,Folx,DIRECT
 PROCESS-NAME,NetTransport,DIRECT
 PROCESS-NAME,uTorrent,DIRECT
 PROCESS-NAME,WebTorrent,DIRECT
+RULE-SET,https://cdn.jsdelivr.net/gh/Loyalsoldier/surge-rules@release/ruleset/steam.txt,PROXY
+RULE-SET,https://cdn.jsdelivr.net/gh/Loyalsoldier/surge-rules@release/ruleset/steam-cn.txt,DIRECT
 RULE-SET,https://cdn.jsdelivr.net/gh/Loyalsoldier/surge-rules@release/ruleset/private.txt,DIRECT
 RULE-SET,https://cdn.jsdelivr.net/gh/Loyalsoldier/surge-rules@release/ruleset/reject.txt,REJECT
 RULE-SET,SYSTEM,DIRECT
@@ -209,6 +225,8 @@ PROCESS-NAME,Folx,DIRECT
 PROCESS-NAME,NetTransport,DIRECT
 PROCESS-NAME,uTorrent,DIRECT
 PROCESS-NAME,WebTorrent,DIRECT
+DOMAIN-SET,https://cdn.jsdelivr.net/gh/Loyalsoldier/surge-rules@release/steam.txt,PROXY
+DOMAIN-SET,https://cdn.jsdelivr.net/gh/Loyalsoldier/surge-rules@release/steam-cn.txt,DIRECT
 DOMAIN-SET,https://cdn.jsdelivr.net/gh/Loyalsoldier/surge-rules@release/private.txt,DIRECT
 DOMAIN-SET,https://cdn.jsdelivr.net/gh/Loyalsoldier/surge-rules@release/reject.txt,REJECT
 RULE-SET,SYSTEM,DIRECT
@@ -240,6 +258,8 @@ PROCESS-NAME,Folx,DIRECT
 PROCESS-NAME,NetTransport,DIRECT
 PROCESS-NAME,uTorrent,DIRECT
 PROCESS-NAME,WebTorrent,DIRECT
+RULE-SET,https://cdn.jsdelivr.net/gh/Loyalsoldier/surge-rules@release/ruleset/steam.txt,PROXY
+RULE-SET,https://cdn.jsdelivr.net/gh/Loyalsoldier/surge-rules@release/ruleset/steam-cn.txt,DIRECT
 RULE-SET,https://cdn.jsdelivr.net/gh/Loyalsoldier/surge-rules@release/ruleset/private.txt,DIRECT
 RULE-SET,https://cdn.jsdelivr.net/gh/Loyalsoldier/surge-rules@release/ruleset/reject.txt,REJECT
 RULE-SET,SYSTEM,DIRECT
