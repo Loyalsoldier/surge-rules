@@ -109,7 +109,7 @@
 
 **DOMAIN-SET：**
 
-```
+```toml
 [Rule]
 PROCESS-NAME,v2ray,DIRECT
 PROCESS-NAME,xray,DIRECT
@@ -146,7 +146,7 @@ FINAL,PROXY,dns-failed
 
 **RULE-SET：**
 
-```
+```toml
 [Rule]
 PROCESS-NAME,v2ray,DIRECT
 PROCESS-NAME,xray,DIRECT
@@ -190,7 +190,7 @@ FINAL,PROXY,dns-failed
 
 **DOMAIN-SET：**
 
-```
+```toml
 [Rule]
 PROCESS-NAME,v2ray,DIRECT
 PROCESS-NAME,clash,DIRECT
@@ -221,7 +221,7 @@ FINAL,DIRECT,dns-failed
 
 **RULE-SET：**
 
-```
+```toml
 [Rule]
 PROCESS-NAME,v2ray,DIRECT
 PROCESS-NAME,clash,DIRECT
