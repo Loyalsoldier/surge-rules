@@ -252,4 +252,4 @@ FINAL,DIRECT,dns-failed
 
 ## 项目 Star 数增长趋势
 
-[![Stargazers over time](https://starchart.cc/Loyalsoldier/surge-rules.svg)](https://starchart.cc/Loyalsoldier/surge-rules)
+[![Star History Chart](https://api.star-history.com/svg?repos=Loyalsoldier/surge-rules&type=Date)](https://star-history.com/#Loyalsoldier/surge-rules&Date)
