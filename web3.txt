@@ -1,0 +1,172 @@
+# 币安
+DOMAIN-SUFFIX,binance.com
+DOMAIN-SUFFIX,binance.info
+DOMAIN-SUFFIX,bnbstatic.com
+DOMAIN-SUFFIX,appsflayer.com
+DOMAIN-SUFFIX,binance.cloud
+DOMAIN-SUFFIX,binance.me
+DOMAIN-SUFFIX,binancecnt.com
+DOMAIN-SUFFIX,binancefuture.com
+DOMAIN-SUFFIX,bnappzh.co
+DOMAIN-SUFFIX,bnbstatic.com
+DOMAIN-SUFFIX,bnbzh.ac
+DOMAIN-SUFFIX,bntrace.com
+
+# OKX
+DOMAIN-SUFFIX,okx.com
+DOMAIN-SUFFIX,okex.com
+DOMAIN-SUFFIX,oklink.com
+DOMAIN-SUFFIX,okx.com.cdn.cloudflare.net
+
+# bybit
+DOMAIN-SUFFIX,bybit.com
+DOMAIN-SUFFIX,byd3c3.com
+DOMAIN-SUFFIX,bycsi.com
+DOMAIN-SUFFIX,bybit-global.com
+DOMAIN-SUFFIX,bybit-global.com
+DOMAIN-SUFFIX,bybit.cloud
+DOMAIN-SUFFIX,bybit.org
+DOMAIN-SUFFIX,bybit.biz
+DOMAIN-SUFFIX,bybit.com
+DOMAIN-SUFFIX,bybitglobal.com
+
+# 其他
+DOMAIN-SUFFIX,bitget.com
+DOMAIN-SUFFIX,mexc.com
+DOMAIN-SUFFIX,gate.io
+DOMAIN-SUFFIX,kucoin.com
+DOMAIN-SUFFIX,coinw.com
+DOMAIN-SUFFIX,coinswitch.co
+DOMAIN-SUFFIX,coindcx.com
+DOMAIN-SUFFIX,bullish.com
+DOMAIN-SUFFIX,bitstamp.net
+DOMAIN-SUFFIX,bitpanda.com
+DOMAIN-SUFFIX,bithumb.com
+
+
+DOMAIN-SUFFIX,saasexch.cc
+DOMAIN-SUFFIX,saasexch.com
+
+# btc生态
+DOMAIN-SUFFIX,unisat.io
+DOMAIN-SUFFIX,geniidata.com
+DOMAIN-SUFFIX,mempool.space
+
+
+# Wallet
+DOMAIN-SUFFIX,walletconnect.com
+DOMAIN-SUFFIX,walletconnect.org
+DOMAIN-SUFFIX,metamask.io
+DOMAIN-SUFFIX,ledger.com
+DOMAIN-SUFFIX,trezor.io
+DOMAIN-SUFFIX,imagedelivery.net
+DOMAIN-SUFFIX,onekey.so
+DOMAIN-SUFFIX,onekey-asset.com
+DOMAIN-SUFFIX,keplr.app
+DOMAIN-SUFFIX,keyst.one
+DOMAIN-SUFFIX,1key.so
+
+# k线
+DOMAIN-SUFFIX,coinmarketcap.com
+DOMAIN-SUFFIX,coingecko.com
+DOMAIN-SUFFIX,dexscreener.com
+DOMAIN-SUFFIX,dex.guru
+DOMAIN-SUFFIX,dextools.io
+DOMAIN-SUFFIX,avedex.cc
+DOMAIN-SUFFIX,poocoin.app
+DOMAIN-SUFFIX,tradingview.com
+DOMAIN-SUFFIX,aimoon.com
+DOMAIN-SUFFIX,birdeye.so
+DOMAIN-SUFFIX,dexlab.space
+DOMAIN-SUFFIX,solape.io
+DOMAIN-SUFFIX,coinhall.org
+DOMAIN-SUFFIX,ibccoin.org
+DOMAIN-SUFFIX,defillama.com
+
+# Swap
+DOMAIN-SUFFIX,uniswap.org
+DOMAIN-SUFFIX,odos.xyz
+DOMAIN-SUFFIX,zerion.io
+DOMAIN-SUFFIX,pancakeswap.finance
+DOMAIN-SUFFIX,matcha.xyz
+DOMAIN-SUFFIX,babyswap.finance
+DOMAIN-SUFFIX,dodoex.io
+DOMAIN-SUFFIX,dydx.exchange
+DOMAIN-SUFFIX,curve.fi
+DOMAIN-SUFFIX,sushi.com
+DOMAIN-SUFFIX,balancer.fi
+DOMAIN-SUFFIX,traderjoexyz.com
+
+# Bridge
+DOMAIN-SUFFIX,bungee.exchange
+DOMAIN-SUFFIX,jumper.exchange
+DOMAIN-SUFFIX,xy.finance
+DOMAIN-SUFFIX,stargate.finance
+
+# Lending protocol
+DOMAIN-SUFFIX,aave.com
+DOMAIN-SUFFIX,sentiment.xyz
+DOMAIN-SUFFIX,benqi.fi
+DOMAIN-SUFFIX,aevo.xyz
+DOMAIN-SUFFIX,extrafi.io
+DOMAIN-SUFFIX,kamino.finance
+
+# Perpetual Swap
+DOMAIN-SUFFIX,gmx.io
+
+# chain
+DOMAIN-SUFFIX,linea.build
+DOMAIN-SUFFIX,avax.network
+DOMAIN-SUFFIX,scroll.io
+DOMAIN-SUFFIX,blast.io
+
+# scan
+DOMAIN-SUFFIX,debank.com
+DOMAIN-SUFFIX,etherscan.io
+DOMAIN-SUFFIX,etherscan.com
+DOMAIN-SUFFIX,arbiscan.io
+DOMAIN-SUFFIX,polygonscan.com
+DOMAIN-SUFFIX,bscscan.com
+DOMAIN-SUFFIX,snowtrace.io
+DOMAIN-SUFFIX,zkscan.io
+
+
+# RPC / API / Tool
+DOMAIN-SUFFIX,chinalist
+DOMAIN-SUFFIX,alchemy.com
+DOMAIN-SUFFIX,ankr.com
+DOMAIN-SUFFIX,collab.land
+DOMAIN-SUFFIX,chainlist.org
+DOMAIN-SUFFIX,blocknative.com
+
+# nft
+DOMAIN-SUFFIX,opensea.io
+DOMAIN-SUFFIX,blur.io
+DOMAIN-SUFFIX,element.market
+
+# BTC
+DOMAIN-SUFFIX,wizz.cash
+DOMAIN-SUFFIX,unisat.io
+
+# other project
+DOMAIN-SUFFIX,safe.global
+DOMAIN-SUFFIX,secwarex.io
+DOMAIN-SUFFIX,gopluslabs.io
+DOMAIN-SUFFIX,infura.io
+DOMAIN-SUFFIX,mocaverse.xyz
+DOMAIN-SUFFIX,galxe.com
+DOMAIN-SUFFIX,galaxy.eco
+DOMAIN-SUFFIX,seadn.io
+DOMAIN-SUFFIX,utopialabs.com
+DOMAIN-SUFFIX,namada.net
+DOMAIN-SUFFIX,zomma.pro
+DOMAIN-SUFFIX,consensys-nft.com
+DOMAIN-SUFFIX,tbook.com
+DOMAIN-SUFFIX,io.solutions
+DOMAIN-SUFFIX,mirror.xyz
+DOMAIN-SUFFIX,microlancer.io
+DOMAIN-SUFFIX,sats4likes.com
+DOMAIN-SUFFIX,sablier.com
+DOMAIN-SUFFIX,beefy.com
+DOMAIN-SUFFIX,friend.tech
+DOMAIN-SUFFIX,io.net
