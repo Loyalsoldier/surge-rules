@@ -47,11 +47,6 @@ DOMAIN-SUFFIX,bithumb.com
 DOMAIN-SUFFIX,saasexch.cc
 DOMAIN-SUFFIX,saasexch.com
 
-# btc生态
-DOMAIN-SUFFIX,unisat.io
-DOMAIN-SUFFIX,geniidata.com
-DOMAIN-SUFFIX,mempool.space
-
 
 # Wallet
 DOMAIN-SUFFIX,walletconnect.com
@@ -147,6 +142,9 @@ DOMAIN-SUFFIX,element.market
 # BTC
 DOMAIN-SUFFIX,wizz.cash
 DOMAIN-SUFFIX,unisat.io
+DOMAIN-SUFFIX,unisat.io
+DOMAIN-SUFFIX,geniidata.com
+DOMAIN-SUFFIX,mempool.space
 
 # other project
 DOMAIN-SUFFIX,safe.global
