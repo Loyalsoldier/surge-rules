@@ -149,3 +149,17 @@ jobs:
           for file in $(ls ruleset); do
             curl -i "https://purge.jsdelivr.net/gh/${{ github.repository }}@release/ruleset/${file}"
           done
+
+      - name: Install COS Command Line Tool
+        run: pip install coscmd
+
+      - name: Configure COSCMD
+        env:
+          SECRET_ID: ${{ secrets.TCLOUD_SECRET_ID }}
+          SECRET_KEY: ${{ secrets.TCLOUD_SECRET_KEY }}
+          BUCKET: ${{ secrets.TCLOUD_BUCKET }}
+          REGION: ${{ secrets.TCLOUD_REGION }}
+        run: coscmd config -a $SECRET_ID -s $SECRET_KEY -b $BUCKET -r $REGION
+
+      - name: Upload COS
+        run: coscmd upload -r publish/ loyalsoldier/surge-rules/ --ignore "publish/.git/*"
