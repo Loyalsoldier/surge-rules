@@ -1,4 +1,6 @@
 name: Generate routing rules for Surge
+permissions:
+  contents: write
 on:
   workflow_dispatch:
   schedule:
