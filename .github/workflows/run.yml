@@ -34,7 +34,7 @@ jobs:
         shell: bash
 
       - name: Checkout the default branch
-        uses: actions/checkout@v6
+        uses: actions/checkout@v7
 
       - name: Make directory
         run: |
