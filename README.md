@@ -247,4 +247,10 @@ FINAL,DIRECT,dns-failed
 
 ## 项目 Star 数增长趋势
 
-[![Stargazers over time](https://starchart.cc/Loyalsoldier/surge-rules.svg)](https://starchart.cc/Loyalsoldier/surge-rules)
+<a href="https://www.star-history.com/?repos=Loyalsoldier%2Fsurge-rules&type=date&legend=top-left">
+ <picture>
+   <source media="(prefers-color-scheme: dark)" srcset="https://api.star-history.com/chart?repos=Loyalsoldier/surge-rules&type=date&theme=dark&legend=top-left&sealed_token=LrPRpGRCkRdkkveR_tikB63Tg54ZQ9h4kxDkLlSAAy4jdHzStERcDFohxBqcWh29weTvRe-6E1A4UOmP0qww6padIZAzeT9FQOdgaNWcuSgmGuoYJMU1rQ" />
+   <source media="(prefers-color-scheme: light)" srcset="https://api.star-history.com/chart?repos=Loyalsoldier/surge-rules&type=date&legend=top-left&sealed_token=LrPRpGRCkRdkkveR_tikB63Tg54ZQ9h4kxDkLlSAAy4jdHzStERcDFohxBqcWh29weTvRe-6E1A4UOmP0qww6padIZAzeT9FQOdgaNWcuSgmGuoYJMU1rQ" />
+   <img alt="Star History Chart" src="https://api.star-history.com/chart?repos=Loyalsoldier/surge-rules&type=date&legend=top-left&sealed_token=LrPRpGRCkRdkkveR_tikB63Tg54ZQ9h4kxDkLlSAAy4jdHzStERcDFohxBqcWh29weTvRe-6E1A4UOmP0qww6padIZAzeT9FQOdgaNWcuSgmGuoYJMU1rQ" />
+ </picture>
+</a>
