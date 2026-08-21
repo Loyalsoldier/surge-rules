@@ -1,0 +1,42 @@
+# OpenAI / ChatGPT + US School SSO
+# Surge format
+# Usage:
+# RULE-SET,https://your-rule-set-url/openai-csun-sso.list,US-SFO-01
+
+# OpenAI Core Services
+chatgpt.com
+openai.com
+oaistatic.com
+oaiusercontent.com
+DOMAIN-KEYWORD,openai
+
+# OpenAI API & Infrastructure
+api.openai.com
+cdn.openai.com
+platform.openai.com
+chat.openai.com
+pay.openai.com
+
+# OpenAI Auth & Security
+auth0.com
+arkoselabs.com
+client-api.arkoselabs.com
+events.statsigapi.net
+featuregates.org
+launchdarkly.com
+
+# ChatGPT Voice & Realtime
+api.statsig.com
+chatgpt.livekit.cloud
+host.livekit.cloud
+turn.livekit.cloud
+livekit.cloud
+
+# Google Login Fallback
+accounts.google.com
+googleusercontent.com
+gstatic.com
+
+# CDN & Content Delivery
+cdn.shopify.com
+js.stripe.com
