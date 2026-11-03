@@ -32,7 +32,7 @@
 - **iCloud 域名列表 icloud.txt**：
   - [https://raw.githubusercontent.com/Loyalsoldier/surge-rules/release/icloud.txt](https://raw.githubusercontent.com/Loyalsoldier/surge-rules/release/icloud.txt)
   - [https://cdn.jsdelivr.net/gh/Loyalsoldier/surge-rules@release/icloud.txt](https://cdn.jsdelivr.net/gh/Loyalsoldier/surge-rules@release/icloud.txt)
-- **[慎用]Google 在中国大陆可直连的域名列表 google.txt**：
+- **[慎用] Google 在中国大陆可直连的域名列表 google.txt**：
   - [https://raw.githubusercontent.com/Loyalsoldier/surge-rules/release/google.txt](https://raw.githubusercontent.com/Loyalsoldier/surge-rules/release/google.txt)
   - [https://cdn.jsdelivr.net/gh/Loyalsoldier/surge-rules@release/google.txt](https://cdn.jsdelivr.net/gh/Loyalsoldier/surge-rules@release/google.txt)
 - **GFWList 域名列表 gfw.txt**：
@@ -170,7 +170,7 @@ RULE-SET,LAN,DIRECT
 FINAL,PROXY,dns-failed
 ```
 
-#### 黑色名单模式
+#### 黑名单模式
 
 ⚠️ 注意：
 
